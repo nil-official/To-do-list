@@ -22,17 +22,17 @@ A **Spring Boot-based ToDo List application** with JWT authentication and role-b
 ## Project Structure
 ```plaintext
 src/main/java/com/niladri/todo/
-├── config          # Application configuration (JWT, security, etc.)
-├── controller      # REST controllers for handling API requests
-├── dto             # Data Transfer Objects (request and response models)
-├── exception       # Custom exceptions and global exception handling
-├── mapper          # (Optional) Mapper classes for DTO to entity conversion
-├── model           # Domain models/entities (User, Todo, etc.)
-├── repository      # Repository interfaces for database access
-├── security        # Security-related classes (filters, services)
-├── service         # Business logic and service classes
-├── utility         # Utility/helper classes (e.g., JWT utility)
-└── ToDoListApplication.java # Main Spring Boot application class
+├── config                      # Application configuration (JWT, security, etc.)
+├── controller                  # REST controllers for handling API requests
+├── dto                         # Data Transfer Objects (request and response models)
+├── exception                   # Custom exceptions and global exception handling
+├── mapper                      # Mapper classes for DTO to entity conversion
+├── model                       # Domain models/entities (User, Todo, etc.)
+├── repository                  # Repository interfaces for database access
+├── security                    # Security-related classes (filters, services)
+├── service                     # Business logic and service classes
+├── utility                     # Utility/helper classes (e.g., JWT utility)
+└── ToDoListApplication.java    # Main Spring Boot application class
 ```
 
 ## API Endpoints
@@ -51,8 +51,8 @@ src/main/java/com/niladri/todo/
 
 ### Prerequisites
 - Java 21
+- PostgreSQL 16
 - Maven
-- PostgreSQL database setup
 
 ### Installation
 1. Clone the repository:
@@ -62,11 +62,10 @@ src/main/java/com/niladri/todo/
 
 2. Configure the database in `src/main/resources/application.properties`:
    ```properties
-   spring.datasource.url=jdbc:mysql://localhost:3306/todolistdb
-   spring.datasource.username=root
-   spring.datasource.password=yourpassword
-   spring.jpa.hibernate.ddl-auto=update
-   spring.jpa.show-sql=true
+   spring.datasource.url=jdbc:postgresql://localhost:5432/your_dbname
+   spring.datasource.driver-class-name=org.postgresql.Driver
+   spring.datasource.username=your_username
+   spring.datasource.password=your_password
    ```
 
 3. Build the application:
